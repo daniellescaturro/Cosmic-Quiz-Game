@@ -1,0 +1,23 @@
+Project Proposal for Quiz Game (working title)
+
+Concept:  a one-player quiz game
+
+High-level Outline:
+	- Welcome screen asking if the user wants to play. Buttons for Yes and No. 
+	- Player will answer a set of 10 multiple choice questions
+	- Each question will have 4 options for the answer
+	- Player makes a selction, selection is highlighted in some way (e.g., a box around the selection)
+	- Answer is evaluated for correctness
+		-- Response is provided to player via an animation 
+			--- Correct response gets a green checkmark
+			--- Incorrect answer gets a red X and the correct answer gets a green checkmark
+	- Player earns 1 point for each correct answer. No points are lost for missed questions. 
+	- Process repeats through 10 questions
+	- Correct responses/ points are tracked throughout the game
+	- At the end, the total points are provided to the player.
+		-- A win entails, answering more than half the question correct, so 6 or more.
+		-- On the final screen, a button is included asking if the player wants to play again. This restarts the game.   
+
+Stretch Goal:
+	- Include a timer for answering each question, i.e, the player has 10 seconds to answer the question or it is marked incorrect
+
