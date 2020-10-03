@@ -16,8 +16,11 @@ High-level Outline:
 	- Correct responses/ points are tracked throughout the game
 	- At the end, the total points are provided to the player.
 		-- A win entails, answering more than half the question correct, so 6 or more.
-		-- On the final screen, a button is included asking if the player wants to play again. This restarts the game.   
+		-- On the final screen, a button is included asking if the player wants to play again. This restarts the game. 
+
+//DO I WANT A THEME FOR QUESTIONS? FOCUS ON SOMETHING I KNOW.  
 
 Stretch Goal:
 	- Include a timer for answering each question, i.e, the player has 10 seconds to answer the question or it is marked incorrect
+	-Add another player. 
 

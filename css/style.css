@@ -1,3 +1,9 @@
 body {
-	background-color: pink;
+	background-color: #020F59;
+	color: white;
 }
+
+h1, h2, #yes, #no {
+	text-align: center;
+}
+
