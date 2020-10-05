@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&display=swap');
 
 body {
+	background: url('../images/starry-night-sky.jpg');
 	background-color: #020F59;
 	color: white;
 	font-family: Montserrat, sans-serif; 
 	font-size: 20px;
-	margin: 25px 50px;
+	margin: 50px 50px;
 }
 
 h1 {

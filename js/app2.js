@@ -278,6 +278,7 @@ $(() => {
 		}
 	})
 
+//FROM HERE DOWN DOESN'T WORK
 	setTimeout(function() {
 		let questionsAsked = 0
 		let totalQuestions = 5
@@ -319,7 +320,8 @@ $(() => {
 			$('#playAgain').append($playAgainBtn)
 		}
 	}, 1500)
-			
+	
+
 	let $startBtn = $('<button class="buttons" id="startBtn">Start Game</button>') //THIS IS REPEATED FROM LINE 227
 	
 	$startBtn.on('click', () => {
