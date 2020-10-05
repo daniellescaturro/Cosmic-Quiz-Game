@@ -1,9 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&display=swap');
+
 body {
 	background-color: #020F59;
 	color: white;
+	font-family: Montserrat, sans-serif; 
+	font-size: 20px;
+	margin: 25px 50px;
 }
 
-h1, h2, #yes, #no {
+h1 {
+	font-family: Orbitron, sans-serif;
 	text-align: center;
 }
+
+h2 {
+	font-family: Montserrat, sans-serif;
+	text-align: center;
+}
+
+img {
+	width: 100%;
+}
+
+.buttons {
+	background-color: gray;
+	border: none;
+	border-radius: 20px;
+	color: white;
+	padding: 15px 32px;
+	font-size: 18px;
+	margin: 0 auto;
+	align-content: center;	
+}
+
 

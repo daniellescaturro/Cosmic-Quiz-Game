@@ -33,32 +33,38 @@ Nice to haves (added after initial proposal):
 
 PROJECT PLAN / ACTION STEPS
 
-	- Identify several trivia questions (~3) I can use for early phases of design and testing
-	- Create homepage with invitation to play and yes/no buttons, with functionality for playing or exiting
-		-- Use event listner ('onclick') to say "goodbye" for "no" and clear the screen for "yes"
-	- Create first question page where trivia question is chosen at random, with functionality for player to click on a response
-		-- If yes, clear homepage 
-		-- Create div for question and child divs for choices
-		--create an array of objects of questions and choices 
-	- Create animation for player selection/response 
-		-- Event listener (onclick) that puts box around selected answer
-	- Compare input to correct answer
-		-- If player selected answer with a ^ then "correct", else "incorrect"
-	- Create animation for correct answer - green check mark by answer
-		(Look back at lessons for day with pyramid lab)
-	- Create tracking of correct answers
-	- Create animation for incorrect answer - red x by incorrect selection (keeping initial outline around selection, and green checkmark by correct answer)
-	- Initiate moving to next question, excluding question already displayed
-	- Create loop to move through 3 questions and the steps repeat 
-	- Create assessment page, if player got >=2 question right = win, if player got <=1 questions right, show counter on screen, invite to play again with yes/no button
-	- Add bank of trivia questions (~25). Decide on theme. 
-	- Update code (if necessary) to accomodate additional trivia questions
+	x- Identify several trivia questions (~3) I can use for early phases of design and testing
+	x- Create homepage with invitation to play and yes/no buttons, with functionality for playing or exiting
+		x-- Use event listner ('onclick') to say "goodbye" for "no" and clear the screen for "yes"
+	x- Create first question page where trivia question is chosen at random, with functionality for player to click on a response
+		x-- If yes, clear homepage 
+		x-- Create div for question and child divs for choices
+		x--create an array of objects of questions and choices
+	x - Use radio buttons for player selection
+	x - Compare input to correct answer
+		x -- If player selected answer matches "correctAnswer", else "incorrect"
+	x - Create animation for correct answer - green check mark by answer
+	x - Create animation for incorrect answer - red x by incorrect selection and green checkmark by correct answer, keeping player selection in radio button
+	x - Create tracking of correct answers
+	x - Initiate moving to next question
+	x - Repeats until completes 3 questions	
+	x - Create assessment page, if player got more than half correct = win, if player got less than half questions right = lose, show counter on screen, invite to play again with yes/no button
+	x - Add bank of trivia questions (~80). 
+	x - Decide on theme for questions (space). 
+	x - Randomize question selection, removing questions already used
+	x - Begin testing with 5 questions
+	  - Separate functions into smaller chuncks (game is currently essentially one big function)
+	  - Style pages
+	  - Keep adding questions from questionBank to questions array (currently at 21, needs to get to 80)
+	  - Stretch: Add a time/counter for each page to count down while player answers questions.
 
 
 QUESTIONS:
-	- What file type do I store my question bank and how do I format it so they can be selected for the game?
-	- Why aren't my yes/no button centering? (they did when I had body set to text-align: center;)
-	- How do I style #noBtn message? Currently it appends immediately after button and I'd like for it to start on a new line, be larger, centered, etc.  
+	- Why isn't much of my CSS working?
+		-- Buttons on different pages behaving differently despite divs, classes and id's (none of buttons centering, yes/no button not taking background color, font color, font size, etc.)
+		-- Background image not working. (Had it on there through html as small image in the body. Couldn't get it to cover whole page (tried putting it in html, style.css/body, etc. Now not working at all, got an red " on the following div (welcomeScreen), but all the syntax looked correct).
+	- How do I link app.js files together so they work together? Currently my questions array takes up a lot of room and would be nice to put this in another file. 
+	
 
 
 

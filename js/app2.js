@@ -190,9 +190,11 @@ D: "Jupiter and Neptune"
 
 ]
 
-ansChoices = ["A", "B", "C", "D"]
-answerKey = "correctAnswer"
-
+const ansChoices = ["A", "B", "C", "D"]
+const answerKey = "correctAnswer"
+let randomQues = Math.floor(Math.random() * questions.length)
+let question = questions[randomQues]
+let score = 0
 
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -202,15 +204,30 @@ const shuffleArray = (array) => {
         array[j] = temp;
     }
 }
+
 const questionsCopy = [...questions]
 
+const evaluateAnswer = () => {	
+	$('input:radio').change(function() { 
+	if(this.value === question[answerKey]){
+		score++
+		$(this).parent().append($('<img>', {src:'images/green_checkmark.png', width: 20}))
+	} else {
+		$(this).parent().append($('<img>', {src:'images/red_x.png', width: 15}))
+		$(`input[value="${question[answerKey]}"]`).parent().append($('<img>', {src:'images/green_checkmark.png', width: 20}))
+		}
+	})
+}
+			
 
 $(() => {
 	
 	const $noBtn = $('#noBtn')
 	const $yesBtn = $('#yesBtn')
-	const $startBtn = $('<button class="buttons" id="startBtn">Start Game</button>')
+	let $startBtn = $('<button class="buttons" id="startBtn">Start Game</button>')
 
+	// let questionsAsked = 0
+	// let totalQuestions = 5
 
 	$noBtn.on('click', () => {
 		$('body').append("Ok, bye!")
@@ -226,88 +243,88 @@ $(() => {
 		$('body').append($divStart)
 		$divStart.append($h1)
 		$divStart.append($startBtn) 
-	})	
-	
-	let totalQuestions = 5
-	let score = 0
-	let questionsAsked = 0
-	
-	const displayQuestion = () => {
-		let randomQues = Math.floor(Math.random() * questions.length)
-		let question = questions[randomQues]
-		questions.splice(randomQues, 1)
-				
-		//this piece of the function pulls the question - cld be it's own function
-		let $divQues = $(`<div class="question" id="question${randomQues}"></div>`)
-			let $p = $('<p></p>')
-			$p.text(question.Q)
-			$divQues.append($p)
+	})
 
-			//this piece pulls the answerChoices - cld be it's own function
+
+	// let totalQuestions = 5
+	// let questionsAsked = 0
+	let $divQues = $(`<div class="question" id="question${randomQues}"></div>`)
+	let $p = $('<p></p>')
+	let $divChoices = $('<div class ="choices"></div>')
+
+
+	$startBtn.on('click', () => {
+		$('#startScreen').empty()
+		
+		const displayQuestion = () => {
+			questions.splice(randomQues, 1)
+			$('body').append($divQues)
+		}		
+		displayQuestion()
+		displayAnsChoices()
+	})	
+
+		const displayAnsChoices = () => {
+			$divQues.append($p)
+			$p.text(question.Q)
 			for (let i = 0; i < ansChoices.length; i++) {
 				let option = ansChoices[i]
-				let $divChoices = $('<div class ="choices"></div>')
 				$divChoices = $(`<div class="choices"><input type="radio" value="${question[option]}"/>${option}:  ${question[option]}</div>`)
 				$divQues.append($divChoices)
-			}
+			}	
 			$('body').append($divQues)
+			$divQues.append($divChoices)
+			evaluateAnswer()
+		}
+	})
 
-			$('input:radio').change(function() { 
-				if(this.value === question[answerKey]){
-					score++
-					$(this).parent().append($('<img>', {src:'images/green_checkmark.png', width: 20}))
-				} else {
-					$(this).parent().append($('<img>', {src:'images/red_x.png', width: 15}))
-					$(`input[value="${question[answerKey]}"]`).parent().append($('<img>', {src:'images/green_checkmark.png', width: 20}))
-				}
-				
-
-				setTimeout(function(){
-						questionsAsked++
-						if(questionsAsked < totalQuestions){
-							$('.question').remove()
-						//next two lines cld be own function, can call on if stmnt above
-							displayQuestion()
-						} else {
-						//final score function
-							$('.question').remove()
-							let $divScore = $('<div id="finalScore"></div')
-							let $p = $('<p></p>')
-							if(score > totalQuestions / 2) {
-								$p.text('You achieved a score of ' + score + ' out of ' + totalQuestions + '.  You won!')
-								$divScore.append($p)
-								$('body').append($divScore)
-							} else {
-								$p.text('You achieved a score of ' + score + ' out of ' + totalQuestions + '. You lost!')
-								$divScore.append($p)
-								$('body').append($divScore)
-							}
-						//play again can be it's own function	
-							const $divPlayAgain = ('<div id="playAgain"></div>')
-							const $playAgainBtn = $('<button class="buttons" id="playAgainBtn">Play Again</button>')
-									
-							$playAgainBtn.on('click', () =>{
-								randomQues = 0
-								score = 0
-								questionsAsked = 0
-								$divScore.remove()
-								questions = [...questionsCopy]
-								displayQuestion()
-								$playAgainBtn.hide()
-							})
-							$('body').append($divPlayAgain)
-							$('#playAgain').append($playAgainBtn)
+	setTimeout(function() {
+		let questionsAsked = 0
+		let totalQuestions = 5
+		let $startBtn = $('<button class="buttons" id="startBtn">Start Game</button>') //THIS IS REPEATED FROM LINE 227
+		
+		questionsAsked++
+		if(questionsAsked < totalQuestions) {
+			$('.question').remove()
+			//next two lines cld be own function, can call on if stmnt above
+			displayQuestion() //THIS SHOWS ERROR MSG NOT DEFINED
+		} else {
+		//final score function
+			$('.question').remove()
+			let $divScore = $('<div id="finalScore"></div')
+			let $p = $('<p></p>')
+			if(score > totalQuestions / 2) {
+				$p.text('You achieved a score of ' + score + ' out of ' + totalQuestions + '.  You won!')
+				$divScore.append($p)
+				$('body').append($divScore)
+			} else {
+				$p.text('You achieved a score of ' + score + ' out of ' + totalQuestions + '. You lost!')
+				$divScore.append($p)
+				$('body').append($divScore)
+			}
+		//play again can be it's own function	
+			const $divPlayAgain = ('<div id="playAgain"></div>')
+			const $playAgainBtn = $('<button class="buttons" id="playAgainBtn">Play Again</button>')
 							
-						}
-					
-					}, 1000)
+			$playAgainBtn.on('click', () =>{
+				randomQues = 0
+				score = 0
+				questionsAsked = 0
+				$divScore.remove()
+				questions = [...questionsCopy]
+				displayQuestion()
+				$playAgainBtn.hide()
 			})
-	}
-
+			$('body').append($divPlayAgain)
+			$('#playAgain').append($playAgainBtn)
+		}
+	}, 1500)
+			
+	let $startBtn = $('<button class="buttons" id="startBtn">Start Game</button>') //THIS IS REPEATED FROM LINE 227
+	
 	$startBtn.on('click', () => {
 		$('h1').hide()
 		displayQuestion()
 		$startBtn.hide()
 	})			
-})
 

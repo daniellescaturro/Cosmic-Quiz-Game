@@ -17,35 +17,31 @@
 // C UFOs
 // D Stars
 
-Questions = [
 
-{
-Q: This planet is slightly smaller than Earth and its closest neighbor (excluding the Moon).
+Q1: This planet is slightly smaller than Earth and its closest neighbor (excluding the Moon).
 ^: Venus
 A: Venus
 B: Uranus
 C: Mars
 D: Saturn
-}
 
-{
-Q: This planet is has the largest  group of moons - 31, but it is best known for its ring system.
+
+
+Q2: This planet is has the largest  group of moons - 31, but it is best known for its ring system.
 ^: Saturn
 A: Neptune
 B: Mars
 C: Saturn
 D: Venus
-}
 
-{Q: This planet of the Solar System was named after a Greek god of the sea and earthquakes. The name is actually the Roman translation of the gods name.
+
+Q3: This planet of the Solar System was named after a Greek god of the sea and earthquakes. The name is actually the Roman translation of the gods name.
 ^ Neptune
 A Mercury
 B Neptune
 C Pluto
 D Uranus
-}
 
-]
 
 #Q4 As this is the closest planet to the Sun, its temperatures at the surface range between -300 and 800 F (hot enough for lead to melt).
 ^ Mercury
