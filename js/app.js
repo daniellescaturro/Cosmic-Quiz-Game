@@ -183,10 +183,182 @@ D: "Its silver coloring"
 Q: "Which of the following Solar System planets are designated as gas planets?",
 "correctAnswer": "All of these",
 A: "Saturn",
-B: "All of these",
+B: "Neptune",
+C: "Jupiter and Neptune",
+D: "All of these"
+},
+
+{
+Q: "Which planet of the Solar System is also known as The Evening Star?",
+"correctAnswer": "Venus",
+A: "Mars",
+B: "Venus",
+C: "Earth",
+D: "Uranus"
+},
+
+{
+Q: "Which of the following Solar System planets was not named after a Greek or Roman God?",
+"correctAnswer": "Earth",
+A: "Mercury",
+B: "Saturn",
+C: "Uranus",
+D: "Earth"
+},
+
+{
+Q: "Which is the largest of the so-called terrestrial planets of the Solar System?",
+"correctAnswer": "Earth",
+A: "Mars",
+B: "Venus",
+C: "Earth",
+D: "Jupiter"
+},
+
+{
+Q: "The Earths atmosphere comprises of which two main elements?",
+"correctAnswer": "Oxygen and Nitrogen",
+A: "Oxygen and Hydrogen",
+B: "Hydrogen and Oxone",
+C: "Oxygen and Nitrogen",
+D: "Nitrogen and Hydrogen"
+},
+
+{
+Q: "What was the name of the Earths first artificial satellite?",
+"correctAnswer": "Sputnik 1",
+A: "Telstar 1",
+B: "Telos 1",
+C: "Sputnik 1",
+D: "Explorer 1"
+},
+
+{
+Q: "What percentage of the Earths surface is covered by water?",
+"correctAnswer": "Roughly 70%",
+A: "Exactly 50%",
+B: "Roughly 25%",
+C: "Roughly 50%",
+D: "Roughly 70%"
+},
+
+{
+Q: "Scientists estimate that the Earth and the Solar System were formed how long ago?",
+"correctAnswer": "4.5 billion years",
+A: "100 million years",
+B: "4.5 billion years",
+C: "10 billion years",
+D: "3.5 billion years"
+},
+
+{
+Q: "How long does it take for the planet Earth to orbit the Sun once?",
+"correctAnswer": "365 Days",
+A: "365 Days",
+B: "2 Years",
+C: "8 Months",
+D: "24 Hours"
+},
+
+{
+Q: "How long is one day on planet Earth?",
+"correctAnswer": "About 24 hours",
+A: "About 26 hours",
+B: "About 24 hours",
+C: "About 36 hours",
+D: "About 22 hours"
+},
+
+{
+Q: "Which planet in the Solar System is sometimes referred to as Earths sister planet?",
+"correctAnswer": "Venus",
+A: "Mercury",
+B: "Mars",
+C: "Pluto",
+D: "Venus"
+},
+
+{
+Q: "The Earth orbits the Sun at an average distance of how many million miles?",
+"correctAnswer": 93,
+A: 42,
+B: 93,
+C: 89,
+D: 101
+},
+
+{
+Q: "There is proof that microbes existed on this planet.",
+"correctAnswer": "Mars",
+A: "Pluto",
+B: "Mars",
+C: "The Sun",
+D: "Neptune"
+},
+
+{
+Q: "Which of the four Galilean moons of Jupiter is noted as the most volcanically active body in the solar system?",
+"correctAnswer": "Io",
+A: "Europa",
+B: "Io",
+C: "Callisto",
+D: "Ganymede"
+},
+
+{
+Q: "Named after the leading sylph in Alexander Popes poem Rape of the Lock, the moon Ariel is the natural satellite of which planet of the solar system?",
+"correctAnswer": "Uranus",
+A: "Jupiter",
+B: "Uranus",
 C: "Neptune",
-D: "Jupiter and Neptune"
+D: "Saturn"
+},
+
+{
+Q: "This celestial body is the darkest of Uranus larger moons and its most distinctive feature is a large equatorial ring of bright material (supposedly a crater) named Wunda, which contrasts with the rest of the planet's dark surface.",
+"correctAnswer": "Umbriel",
+A: "Umbriel",
+B: "Oberon",
+C: "Titania",
+D: "Ariel"
+},
+
+{
+Q: "What is the apparent path of the sun around the sky called?",
+"correctAnswer": "Ecliptic",
+A: "Revolution",
+B: "Zodiac",
+C: "Corona",
+D: "Ecliptic"
+},
+
+{
+Q: "At how many approximate degrees does Venus appear from the sun?",
+"correctAnswer": 46,
+A: 78,
+B: 35,
+C: 46,
+D: 55
+},
+
+{
+Q: "Name the point where an objects orbit passes through the plane of Earths orbit.",
+"correctAnswer": "Node",
+A: "Node",
+B: "Apogee",
+C: "Prominence",
+D: "Perigee"
+},
+
+{
+Q: "Why did the U.S.A. launch the Galileo space probe?",
+"correctAnswer": "to explore Jupiter",
+A: "to explore Pluto",
+B: "to explore Mercury",
+C: "to explore Jupiter",
+D: "to explore the sun"
 }
+
 
 ]
 
@@ -220,12 +392,35 @@ const displayQuestion = () => {
 		let $divChoices = $('<div class ="choices"></div>')
 		$divChoices = $(`<div class="choices"><input type="radio" value="${question[option]}"/>${option}:  ${question[option]}</div>`)
 		$divQues.append($divChoices)
+		$('body').append($divQues)
+	// let $divCounter = $('<div id="counter"></div>')
+	// let $p = $('<p id="count"></p>')
+	// $('#count').text(counter)
+	// $divCounter.append($p) 
+	// $('body').append($divCounter)
+
 	}
-	$('body').append($divQues)
+	// setInterval(10)
 	evaluateQuestion(question)
 }
 
+
+// let counter = 10;
+
+
+// setInterval(function(seconds){
+// 	counter--
+// 	if(counter >= 1){
+// 		$('#count').text(counter)
+// 	if(counter === 0){
+// 		id.text("Times Up!")
+// 	}
+// 	}
+// }, 2000)
+
 const evaluateQuestion = (question) => {
+	//const $divChoices = $('.choices')
+	//$divChoices.on('click', () => {
 	$('input:radio').change(function() { 
 		if(this.value === question[answerKey]){
 			score++
@@ -233,6 +428,7 @@ const evaluateQuestion = (question) => {
 		} else {
 			$(this).parent().append($('<img>', {src:'images/red_x.png', width: 15}))
 			$(`input[value="${question[answerKey]}"]`).parent().append($('<img>', {src:'images/green_checkmark.png', width: 20}))
+			//}
 		}
 		nextQuestion()	
 	})

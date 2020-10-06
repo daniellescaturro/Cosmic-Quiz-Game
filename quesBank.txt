@@ -148,7 +148,7 @@ A Saturn
 B All of these
 C Neptune
 D Jupiter and Neptune
-////////////////////////////////////////////////////
+
 #Q Which planet of the Solar System is also known as The Evening Star?
 ^ Venus
 A Mars
@@ -281,7 +281,7 @@ A to explore Pluto
 B to explore Mercury
 C to explore Jupiter
 D to explore the sun
-
+///////////////////////////////////
 #Q The moon phases are the result of the moons rotation around the Earth, causing us to see different parts of the moons surface lit by the sun.
 ^ True
 A True
@@ -312,7 +312,7 @@ A the orbital point of the closest approach to the sun
 B the orbital point of greatest distance from the sun
 C the darkening of the moon when it moves through the Earths shadow
 D any planet visible in the sky just after sunset
-
+///////////////////////////////////////////
 #Q How long can a total lunar eclipse last?
 ^ 1 hour  40 minutes
 A 1 hour  40 minutes
