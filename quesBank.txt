@@ -281,7 +281,7 @@ A to explore Pluto
 B to explore Mercury
 C to explore Jupiter
 D to explore the sun
-///////////////////////////////////
+
 #Q The moon phases are the result of the moons rotation around the Earth, causing us to see different parts of the moons surface lit by the sun.
 ^ True
 A True
@@ -312,7 +312,7 @@ A the orbital point of the closest approach to the sun
 B the orbital point of greatest distance from the sun
 C the darkening of the moon when it moves through the Earths shadow
 D any planet visible in the sky just after sunset
-///////////////////////////////////////////
+
 #Q How long can a total lunar eclipse last?
 ^ 1 hour  40 minutes
 A 1 hour  40 minutes
@@ -347,7 +347,7 @@ A The strong solar rays
 B The rotating movement
 C The lack of atmosphere
 D The influence of Earths gravity
-
+//////////////////////////////////////////////////
 #Q When was the Moon formed?
 ^ About 4.5 billion years ago
 A About 5.7 billion years ago
@@ -382,7 +382,7 @@ A 2,796 miles (4,500 km)
 B 2,154 miles (3,476 km)
 C 5,567 miles (8,960 km)
 D 7,145 miles (11,500 km)
-
+//////////////////////////////////////////////////
 #Q Which of these most accurately describes the term, Solar System?
 ^ The planetary system which our Sun along with the nine planets and other non-stellar objects form
 A A system of non-stellar objects orbiting a star

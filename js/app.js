@@ -1,3 +1,6 @@
+// Open Source Trivia Questions
+// citation: https://github.com/uberspot/OpenTriviaQA
+
 let questions = [
 {
 Q: "These small bodies are considered left overs from the formation of the Solar system some 4.6 billion years ago.",
@@ -357,14 +360,103 @@ A: "to explore Pluto",
 B: "to explore Mercury",
 C: "to explore Jupiter",
 D: "to explore the sun"
-}
+},
 
+{
+Q: "How long can a total lunar eclipse last?",
+"correctAnswer": "1 hour  40 minutes",
+A: "1 hour  40 minutes",
+B: "4 hours  30 minutes",
+C: "2 hours  30 minutes",
+D: "3 hours  20 minutes"
+},
+
+{
+Q: "The side of the Moon that we see is this.",
+"correctAnswer": "The same every night",
+A: "Different every night",
+B: "Different every two weeks",
+C: "Different every month",
+D: "The same every night"
+},
+
+{
+Q: "The distance between the Moon and the Earth is approximately this much.",
+"correctAnswer": "238,897 miles (384,467km)",
+A: "238,897 miles (384,467km)",
+B: "62,000 miles (100,000km)",
+C: "155,342 miles (250,000 km)",
+D: "260,975 miles (420,000 km)",
+},
+
+{
+Q: "The Moon is changing its position it relation to the Earth. In what way?",
+"correctAnswer": "Moving away",
+A: "Getting closer",
+B: "Moving along the Earths Y axis",
+C: "Moving away",
+D: "Moving along the Earths X axis"
+},
+
+{
+Q: "Which factor ensures that many of the craters on the Moons surface remain well preserved in comparison to those on Earth?",
+"correctAnswer": "The lack of atmosphere",
+A: "The strong solar rays",
+B: "The rotating movement",
+C: "The lack of atmosphere",
+D: "The influence of Earths gravity"
+},
+
+{
+Q: "When was the Moon formed?",
+"correctAnswer": "About 4.5 billion years ago",
+A: "About 5.7 billion years ago",
+B: "About 4.5 billion years ago",
+C: "About 300,000 years ago",
+D: "About 1 billion years ago"
+},
+
+{
+Q: "Moons shape is not quite round. What does it resemble?",
+"correctAnswer": "Egg",
+A: "Egg",
+B: "Kiwi",
+C: "Pear",
+D: "Lemon"
+},
+
+{
+Q: "A compass cannot be used on the Moon.  What factor is responsible for this?",
+"correctAnswer": "Lack of a magnetic field",
+A: "Lack of a magnetic field",
+B: "Influence of Earths gravity",
+C: "Asteroid impacts",
+D: "Lack of gravity on the Moon"
+},
+
+{
+Q: "The Moon is taken into consideration when calculating the day of this religious celebration.",
+"correctAnswer": "Easter",
+A: "Thanksgiving",
+B: "Memorial Day",
+C: "Christmas",
+D: "Easter"
+},
+
+{
+Q: "The Moons diameter is approximately this long.",
+"correctAnswer": "2,154 miles (3,476 km)",
+A: "2,796 miles (4,500 km)",
+B: "2,154 miles (3,476 km)",
+C: "5,567 miles (8,960 km)",
+D: "7,145 miles (11,500 km)"
+}
 
 ]
 
 ansChoices = ["A", "B", "C", "D"]
 answerKey = "correctAnswer"
-
+//let counter = 10
 
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -378,6 +470,7 @@ const questionsCopy = [...questions]
 let totalQuestions = 5
 let score = 0
 let questionsAsked = 0
+
 
 const displayQuestion = () => {
 	const randomQues = Math.floor(Math.random() * questions.length)
@@ -396,27 +489,27 @@ const displayQuestion = () => {
 	// let $divCounter = $('<div id="counter"></div>')
 	// let $p = $('<p id="count"></p>')
 	// $('#count').text(counter)
-	// $divCounter.append($p) 
 	// $('body').append($divCounter)
-
-	}
-	// setInterval(10)
+	// $divCounter.append($p) 
+	} 
+	//timer()
 	evaluateQuestion(question)
 }
 
-
-// let counter = 10;
-
-
-// setInterval(function(seconds){
+// const timer = () => {
+// 	counter = 10
+// 	setInterval(() => {
 // 	counter--
-// 	if(counter >= 1){
+// 	if(counter >= 0){
 // 		$('#count').text(counter)
 // 	if(counter === 0){
-// 		id.text("Times Up!")
+// 		$('#count').text("Times Up!")
+// 		}
 // 	}
-// 	}
-// }, 2000)
+// }, 1000)
+// 	clearInterval(counter)
+// }
+
 
 const evaluateQuestion = (question) => {
 	//const $divChoices = $('.choices')
@@ -463,7 +556,7 @@ const displayScore = () => {
 }
 
 const startNewGame = () => {
-	const $divPlayAgain = $('<div id="playAgain"></div>')
+	const $divPlayAgain = $('<div class="button_container" id="playAgain"></div>')
 	const $playAgainBtn = $('<button class="buttons" id="playAgainBtn">Play Again</button>')
 	const $divScore = $("#finalScore")
 
@@ -485,10 +578,13 @@ $(() => {
 	
 	const $noBtn = $('#noBtn')
 	const $yesBtn = $('#yesBtn')
-	const $startBtn = $('<button class="buttons" id="startBtn">Start Game</button>')
+	const $startBtn = $('<div class="button_container"><button class="buttons" id="startBtn">Start Game</button></div>')
 
 	$noBtn.on('click', () => {
-		$('body').append("Ok, bye!")
+		$divBye = $('<div id="bye"></div>')
+		$h3 = $('<h3>Ok bye!</h3>')
+		$('body').append($divBye)
+		$divBye.append($h3)
 	})
 
 	$yesBtn.on('click', () => {
@@ -504,8 +600,8 @@ $(() => {
 
 	$startBtn.on('click', () => {
 		$('h1').hide()
+		$('#startBtn').hide()
 		displayQuestion()
-		$startBtn.hide()
 	})
 })
 

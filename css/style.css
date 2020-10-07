@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&display=swap');
 
 body {
-	background: url('../images/starry-night-sky.jpg') no-repeat center center fixed;
+	background: url('../images/felix-mittermeier-Knwea-mLGAg-unsplash.jpg') no-repeat center center fixed;
 	background-size: cover;
 	background-color: #020F59;
 	color: white;
 	font-family: Montserrat, sans-serif; 
 	font-size: 20px;
-	margin: 50px 50px;
+	margin: 100px auto;
+	width: 75%; 
 }
 
 h1 {
@@ -19,6 +20,13 @@ h1 {
 h2 {
 	font-family: Montserrat, sans-serif;
 	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 25px
+}
+
+h3 {
+	text-align: center;
+	margin-top: 50px;
 }
 
 .buttons {
@@ -28,8 +36,116 @@ h2 {
 	color: white;
 	padding: 15px 32px;
 	font-size: 18px;
-	margin: 0 auto;
+	margin: 25px 10px;
 	align-content: center;	
 }
 
+#startScreen {
+    display: flex;
+    flex-direction: column;
+}
 
+.button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.question {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 75%;
+	margin-top: 75px;
+	margin-left: 150px;
+}
+
+#finalScore {
+	text-align: center;
+}
+
+@media screen and (max-width: 1475px) {
+	.question {
+		margin-left: 125px;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.question {
+		margin-left: 115px;
+	}
+}
+
+@media screen and (max-width: 1175px) {
+	.question {
+		margin-left: 100px;
+	}
+}
+
+@media screen and (max-width: 1062px) {
+	.question {
+		margin-left: 75px;
+	}
+}
+
+@media screen and (max-width: 825px) {
+	.question {
+		margin-left: 65px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.question {
+		margin-left: 50px;
+		margin-top: 0px
+	}
+}
+
+@media screen and (max-width: 460px) {
+	h1 {
+		font-size: 35px;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+	.question {
+		margin-left: 50px;
+		margin-top: 0px
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 22px;
+	}
+	.question {
+		margin-left: 25px;
+		margin-top: 0px;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 366px) {
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 343px) {
+	h1 {
+		font-size: 28px;
+	}
+
+	h2 {
+		font-size: 22px;
+	}
+}
