@@ -27,5 +27,6 @@ The game was created using HTML, CSS, and JavaScript, primarily jQuery. It prima
 ### Challenges & Potential Forthcoming Features
  * After starting the game, the first thing that happens is the first question loads. Very quickly thereafter, the timer loads at the top of the page and moves the question content down the page. This leaves an impression of the content "jumping" and should be fixed. 
  * Add the ability for the user to know their score as the game progresses, and number the questions. 
+ * Increase the size of the question bank so as to reduce the possibility of repeat questions. 
  * Add functionality to make it a one- or two-player game. 
  * I would also like to improve the format, styling and improve the responsive design.
