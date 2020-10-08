@@ -9,7 +9,7 @@ The game is a multiple choice trivia game with an outer space theme. The questio
   * https://git.generalassemb.ly/dscaturro/project-1/blob/master/Wireframe2.JPG
   
 ### User Story
- * To play the game, the user accesses it from their browser at the above link, which will open on a welcome screen.
+ * To play the game, the user accesses it from their browser at the above link, which will open a welcome screen.
  * On the welcome screen will be an invitation to play through "Yes" and "No" buttons.
  * Once the user clicks "Yes" a start game screen appears. The user clicks the "Start Game" button and the game commences.
  * The user will have 60 seconds to answer 10 questions.
