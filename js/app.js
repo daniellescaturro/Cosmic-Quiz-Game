@@ -450,13 +450,146 @@ A: "2,796 miles (4,500 km)",
 B: "2,154 miles (3,476 km)",
 C: "5,567 miles (8,960 km)",
 D: "7,145 miles (11,500 km)"
+},
+
+{
+Q: "Which of these most accurately describes the term, Solar System?",
+"correctAnswer": "The planetary system which our Sun along with the nine planets and other non-stellar objects form",
+A: "A system of non-stellar objects orbiting a star",
+B: "A system comprised of a star or group of stars",
+C: "A system of one or more stars and non-stellar objects, connected in close gravitational association",
+D: "The planetary system which our Sun along with the nine planets and other non-stellar objects form"
+},
+
+{
+Q: "Contrary to this celestial bodys true nature, the term asteroid means what according to its greek origins?",
+"correctAnswer": "Star-like",
+A: "Cone-shaped",
+B: "Planet-like",
+C: "Drifting freely",
+D: "Star-like"
+},
+
+{
+Q: "Which of these is a celestial body, which produces the effect known as shooting star?",
+"correctAnswer": "Meteoroid",
+A: "Meteoroid",
+B: "Asteroid",
+C: "Comet",
+D: "Another planets satellite"
+},
+
+{
+Q: "Hypergiants, the largest stars known to scientists, have a mass up to how many times that of the Sun?",
+"correctAnswer": 100,
+A: 30,
+B: 10,
+C: 100,
+D: 2
+},
+
+{
+Q: "Distances in the universe are enormous compared to those we are used to, so scientists use light years for measurement.  Approximately how many miles does a light year represent?",
+"correctAnswer": "Six trillion miles",
+A: "Six zillion miles",
+B: "Six trillion miles",
+C: "Six million miles",
+D: "Six billion miles"
+},
+
+{
+Q: "In astrophysics, which theorem defines what parameters black holes are characterized by?",
+"correctAnswer": "Black holes have no hair",
+A: "No-ghost theorem",
+B: "Brouwers Fixed point theorem",
+C: "Hairy ball theorem",
+D: "Black holes have no hair"
+},
+
+{
+Q: "In astronomy, the term binary star refers to which of these?",
+"correctAnswer": "A system of two stars both orbiting around their centers of mass",
+A: "A large star which has drawn smaller star to orbit",
+B: "A star made up from both matter and antimatter",
+C: "A system of two stars both orbiting around their centers of mass",
+D: "A star emitting electromagnetic waves at two different frequencies"
+},
+
+{
+Q: "What celestial formations are considered to be the birthplaces of stars?",
+"correctAnswer": "Nebulae",
+A: "Galactic halos",
+B: "Nebulae",
+C: "Spiral galaxies",
+D: "Galaxy cluster clouds"
+},
+
+{
+Q: "The discovery of cosmic object 2003 UB313 caused much stir in astronomers circles. Its discoverers declared 2003 UB313 to be what?",
+"correctAnswer": "The tenth planet in the Solar system",
+A: "The tenth planet in the Solar system",
+B: "A new galaxy",
+C: "A possible black hole near the edge of the Solar system",
+D: "A planetary system with signs of intelligent life"
+},
+
+{
+Q: "Astronauts age faster.",
+"correctAnswer": "False",
+A: "True",
+B: "False"
+},
+
+{
+Q: "The National Aeronautics and Space Administration was established on July 29, 1958 under which U.S.  President?",
+"correctAnswer": "Dwight Eisenhower",
+A: "Dwight Eisenhower",
+B: "Harry Truman",
+C: "John Kennedy",
+D: "Lyndon Johnson"
+},
+
+{
+Q: "On May 5, 1961, this man became the first U.S. astronaut in space.",
+"correctAnswer": "Alan Shepard",
+A: "Buzz Aldrin",
+B: "Neil Armstrong",
+C: "John Glenn",
+D: "Alan Shepard"
+},
+
+{
+Q: "In 2001, NASA sent this unmanned spacecraft to orbit Mars in search of signs of water and volcanic activity on the surface.",
+"correctAnswer": "Mars Odyssey",
+A: "Mars Exploration Rover",
+B: "Mars Reconnaissance Orbiter",
+C: "Mars Pathfinder",
+D: "Mars Odyssey",
+},
+
+{
+Q: "On January 19, 2006 NASA launched the unmanned mission New Horizons to explore Pluto, on a one-way trip of how many years?",
+"correctAnswer": 9,
+A: 4,
+B: 9,
+C: 15,
+D: 13
+},
+
+{
+Q: "The Vision for Space Exploration is the U. S. space program was announced on January 14, 2004 by President George W. Bush. According to this program, the moon will be explored by manned missions by what year?",
+"correctAnswer": 2020,
+A: 2010,
+B: 2011,
+C: 2020,
+D: 2025
 }
 
 ]
 
 ansChoices = ["A", "B", "C", "D"]
 answerKey = "correctAnswer"
-//let counter = 10
+interval = null
 
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -486,34 +619,14 @@ const displayQuestion = () => {
 		$divChoices = $(`<div class="choices"><input type="radio" value="${question[option]}"/>${option}:  ${question[option]}</div>`)
 		$divQues.append($divChoices)
 		$('body').append($divQues)
-	// let $divCounter = $('<div id="counter"></div>')
-	// let $p = $('<p id="count"></p>')
-	// $('#count').text(counter)
-	// $('body').append($divCounter)
-	// $divCounter.append($p) 
 	} 
-	//timer()
 	evaluateQuestion(question)
 }
 
-// const timer = () => {
-// 	counter = 10
-// 	setInterval(() => {
-// 	counter--
-// 	if(counter >= 0){
-// 		$('#count').text(counter)
-// 	if(counter === 0){
-// 		$('#count').text("Times Up!")
-// 		}
-// 	}
-// }, 1000)
-// 	clearInterval(counter)
-// }
-
 
 const evaluateQuestion = (question) => {
-	//const $divChoices = $('.choices')
-	//$divChoices.on('click', () => {
+	const $divChoices = $('.choices')
+	$divChoices.on('click', () => {
 	$('input:radio').change(function() { 
 		if(this.value === question[answerKey]){
 			score++
@@ -521,8 +634,8 @@ const evaluateQuestion = (question) => {
 		} else {
 			$(this).parent().append($('<img>', {src:'images/red_x.png', width: 15}))
 			$(`input[value="${question[answerKey]}"]`).parent().append($('<img>', {src:'images/green_checkmark.png', width: 20}))
-			//}
-		}
+			}
+		})
 		nextQuestion()	
 	})
 }

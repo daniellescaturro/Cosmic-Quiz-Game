@@ -59,6 +59,10 @@ h3 {
 	margin-left: 150px;
 }
 
+.choices {
+	margin-bottom: 10px;
+}
+
 #finalScore {
 	text-align: center;
 }

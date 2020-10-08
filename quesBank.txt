@@ -347,7 +347,7 @@ A The strong solar rays
 B The rotating movement
 C The lack of atmosphere
 D The influence of Earths gravity
-//////////////////////////////////////////////////
+
 #Q When was the Moon formed?
 ^ About 4.5 billion years ago
 A About 5.7 billion years ago
@@ -382,7 +382,7 @@ A 2,796 miles (4,500 km)
 B 2,154 miles (3,476 km)
 C 5,567 miles (8,960 km)
 D 7,145 miles (11,500 km)
-//////////////////////////////////////////////////
+
 #Q Which of these most accurately describes the term, Solar System?
 ^ The planetary system which our Sun along with the nine planets and other non-stellar objects form
 A A system of non-stellar objects orbiting a star
@@ -417,7 +417,7 @@ A Six zillion miles
 B Six trillion miles
 C Six million miles
 D Six billion miles
-
+//////////////////////////////////////////////////
 #Q In astrophysics, which theorem defines what parameters black holes are characterized by?
 ^ Black holes have no hair
 A No-ghost theorem
@@ -450,7 +450,7 @@ D A planetary system with signs of intelligent life
 ^ False
 A True
 B False
-
+//////////////////////////////////////////////////
 #Q The National Aeronautics and Space Administration was established on July 29, 1958 under which U.S.  President?
 ^ Dwight Eisenhower
 A Dwight Eisenhower
