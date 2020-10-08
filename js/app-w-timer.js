@@ -1,3 +1,5 @@
+//VERSION TESTING TIMER
+
 // Open Source Trivia Questions
 // citation: https://github.com/uberspot/OpenTriviaQA
 
@@ -534,6 +536,13 @@ D: "A planetary system with signs of intelligent life"
 },
 
 {
+Q: "Astronauts age faster.",
+"correctAnswer": "False",
+A: "True",
+B: "False"
+},
+
+{
 Q: "The National Aeronautics and Space Administration was established on July 29, 1958 under which U.S.  President?",
 "correctAnswer": "Dwight Eisenhower",
 A: "Dwight Eisenhower",
@@ -582,6 +591,8 @@ D: 2025
 
 ansChoices = ["A", "B", "C", "D"]
 answerKey = "correctAnswer"
+let counter = 15 // may not need this
+interval = null
 
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -592,7 +603,7 @@ const shuffleArray = (array) => {
     }
 }
 const questionsCopy = [...questions]
-let totalQuestions = 10
+let totalQuestions = 5
 let score = 0
 let questionsAsked = 0
 
@@ -612,9 +623,37 @@ const displayQuestion = () => {
 		$divQues.append($divChoices)
 		$('body').append($divQues)
 	} 
+	timer()
 	evaluateQuestion(question)
 }
+//Timer
+//if time is not up and not all questions have not been answered diplay timer
+//if  all questions are answered before timer is up, show score and offer to play again
+//if timer runs out before all questions are answered, then Times Up, show score and offer to play again 
 
+//if jumping after move div to HTML, then add interval = null, and add that to setInterval funciton statement
+const timer = () => {
+	// let $divCounter = $('<div id="counter"></div>') // put div and p into HTML
+	// let $p = $('<p id="count"></p>')
+	//$('#count').text(counter)
+	//$('body').append($divCounter) //then don't need this anymore
+	//$divCounter.append($p) 
+	counter = 15
+	interval = setInterval(() => {
+		counter--
+		if(counter >= 0 && questionsAsked < totalQuestions){
+			$('#count').text(counter)
+		} else if(counter >= 0 && questionsAsked === totalQuestions) {
+			// displayScore()
+			// startNewGame()
+		} else if(counter <= 0 || questionsAsked < totalQuestions){
+			$('#count').text("Times Up!")
+			// displayScore()
+			// startNewGame()
+			clearInterval(interval) // or timer? 
+			}
+	},2000)	
+}
 
 const evaluateQuestion = (question) => {
 	const $divChoices = $('.choices')
@@ -642,7 +681,7 @@ const nextQuestion = () => {
 			displayScore()
 			startNewGame()		
 		}
-	}, 2000)
+	}, 1500)
 }
 
 const displayScore = () => {

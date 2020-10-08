@@ -417,7 +417,7 @@ A Six zillion miles
 B Six trillion miles
 C Six million miles
 D Six billion miles
-//////////////////////////////////////////////////
+
 #Q In astrophysics, which theorem defines what parameters black holes are characterized by?
 ^ Black holes have no hair
 A No-ghost theorem
@@ -485,7 +485,7 @@ A 2010
 B 2011
 C 2020
 D 2025
-
+//////////////////////////////////////////////////
 #Q The International Space Station is a joint project of five space agencies, including NASA. Which Space Agency is not part of the project?
 ^ China National Space Administration
 A Russian Federal Space Agency
