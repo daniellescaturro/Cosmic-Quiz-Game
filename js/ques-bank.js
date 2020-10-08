@@ -576,6 +576,60 @@ A: 2010,
 B: 2011,
 C: 2020,
 D: 2025
+},
+
+{
+Q: "The International Space Station is a joint project of five space agencies, including NASA. Which Space Agency is not part of the project?",
+"correctAnswer": "China National Space Administration",
+A: "Russian Federal Space Agency",
+B: "Canadian Space Agency",
+C: "China National Space Administration",
+D: "Japan Aerospace Exploration Agency"
+},
+
+{
+Q: "This term refers to a celestial body that resembles a star but does not emit light, because it is too small to ignite internal nuclear fusion.",
+"correctAnswer": "Brown Dwarf",
+A: "Neutron Star",
+B: "Brown Dwarf",
+C: "White Dwarf",
+D: "Protostar"
+},
+
+{
+Q: "This astronomical term refers to the outermost layer of the sun, which is a low density cloud of plasma, with higher transparency than the inner layers.",
+"correctAnswer": "Corona",
+A: "Chromosphere",
+B: "Photosphere",
+C: "Corona",
+D: "Solar Wind"
+},
+
+{
+Q: "This chemical element is the final element produced by stellar nucleosynthesis and the heaviest element which does not require a supernova for its formation.",
+"correctAnswer": "Iron",
+A: "Lead",
+B: "Carbon",
+C: "Oxygen",
+D: "Iron"
+},
+
+{
+Q: "This star, the second brightest star in the constellation Orion, is a red supergiant.",
+"correctAnswer": "Betelgeuse",
+A: "Spica",
+B: "Pollux",
+C: "Betelgeuse",
+D: "Sirius"
+},
+
+{
+Q: "This constellation in the Northern Hemisphere was named after a Greek mythological figure, whose name is translated as ruler over men.",
+"correctAnswer": "Andromeda",
+A: "Centaurus",
+B: "Cassiopeia",
+C: "Andromeda",
+D: "Hercules"
 }
 
 ]

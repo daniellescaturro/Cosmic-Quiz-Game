@@ -450,7 +450,7 @@ D A planetary system with signs of intelligent life
 ^ False
 A True
 B False
-//////////////////////////////////////////////////
+
 #Q The National Aeronautics and Space Administration was established on July 29, 1958 under which U.S.  President?
 ^ Dwight Eisenhower
 A Dwight Eisenhower
@@ -485,7 +485,7 @@ A 2010
 B 2011
 C 2020
 D 2025
-//////////////////////////////////////////////////
+
 #Q The International Space Station is a joint project of five space agencies, including NASA. Which Space Agency is not part of the project?
 ^ China National Space Administration
 A Russian Federal Space Agency
@@ -537,7 +537,7 @@ A Centaurus
 B Cassiopeia
 C Andromeda
 D Hercules
-
+//////////////////////////////////////////////////
 
 
 
