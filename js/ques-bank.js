@@ -283,11 +283,11 @@ D: "Venus"
 
 {
 Q: "The Earth orbits the Sun at an average distance of how many million miles?",
-"correctAnswer": 93,
-A: 42,
-B: 93,
-C: 89,
-D: 101
+"correctAnswer": "93",
+A: "42",
+B: "93",
+C: "89",
+D: "101"
 },
 
 {
@@ -337,11 +337,11 @@ D: "Ecliptic"
 
 {
 Q: "At how many approximate degrees does Venus appear from the sun?",
-"correctAnswer": 46,
-A: 78,
-B: 35,
-C: 46,
-D: 55
+"correctAnswer": "46",
+A: "78",
+B: "35",
+C: "46",
+D: "55"
 },
 
 {
@@ -481,11 +481,11 @@ D: "Another planets satellite"
 
 {
 Q: "Hypergiants, the largest stars known to scientists, have a mass up to how many times that of the Sun?",
-"correctAnswer": 100,
-A: 30,
-B: 10,
-C: 100,
-D: 2
+"correctAnswer": "100",
+A: "30",
+B: "10",
+C: "100",
+D: "2"
 },
 
 {
@@ -562,20 +562,20 @@ D: "Mars Odyssey",
 
 {
 Q: "On January 19, 2006 NASA launched the unmanned mission New Horizons to explore Pluto, on a one-way trip of how many years?",
-"correctAnswer": 9,
-A: 4,
-B: 9,
-C: 15,
-D: 13
+"correctAnswer": "9",
+A: "4",
+B: "9",
+C: "15",
+D: "13"
 },
 
 {
 Q: "The Vision for Space Exploration is the U. S. space program was announced on January 14, 2004 by President George W. Bush. According to this program, the moon will be explored by manned missions by what year?",
-"correctAnswer": 2020,
-A: 2010,
-B: 2011,
-C: 2020,
-D: 2025
+"correctAnswer": "2020",
+A: "2010",
+B: "2011",
+C: "2020",
+D: "2025"
 },
 
 {
@@ -631,5 +631,4 @@ B: "Cassiopeia",
 C: "Andromeda",
 D: "Hercules"
 }
-
 ]
