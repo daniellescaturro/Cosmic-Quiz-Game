@@ -1,7 +1,7 @@
 
 ansChoices = ["A", "B", "C", "D"]
 answerKey = "correctAnswer"
-let counter = 15 // may not need this
+let counter = 60 
 
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -12,7 +12,7 @@ const shuffleArray = (array) => {
     }
 }
 const questionsCopy = [...questions]
-let totalQuestions = 5
+let totalQuestions = 10
 let score = 0
 let questionsAsked = 0
 
@@ -61,16 +61,15 @@ function stopTimer() {
 function timerFunc() {
 	counter--
 	if(counter >= 0 && questionsAsked < totalQuestions){
-		console.log(counter)
-		$('#count').text(counter)
+		// console.log(counter)
+		$('#count').text("Timer:  " + counter + " seconds")
 	// } else if(counter >= 0 && questionsAsked === totalQuestions) {
 	// 	// displayScore()
 	// 	// startNewGame()
 	} else if(counter <= 0 || questionsAsked < totalQuestions){
 		$('#count').text("Times Up!")
-		// displayScore()
-		// startNewGame()
-		stopTimer()
+		startNewGame()
+		//stopTimer()
 	}
 }
 	
@@ -98,7 +97,7 @@ const nextQuestion = () => {
 			$('.question').remove()
 			displayQuestion()
 		} else {
-			displayScore()
+			//displayScore()
 			startNewGame()		
 		}
 	}, 1500)
@@ -120,23 +119,29 @@ const displayScore = () => {
 }
 
 const startNewGame = () => {
+	stopTimer()
+	$('.question').remove()
+	displayScore()
+	const $divScore = $("#finalScore")
 	const $divPlayAgain = $('<div class="button_container" id="playAgain"></div>')
 	const $playAgainBtn = $('<button class="buttons" id="playAgainBtn">Play Again</button>')
-	const $divScore = $("#finalScore")
-
+	$('body').append($divPlayAgain)
+	$('#playAgain').append($playAgainBtn)
+	
+		
 	$playAgainBtn.on('click', () =>{
 		score = 0
 		questionsAsked = 0
-		$divScore.remove()
 		questions = [...questionsCopy]
-		displayQuestion()
-		startTimer()
+		counter = 60
+		$divScore.remove() 
 		$playAgainBtn.hide()
 		$divPlayAgain.remove()
+		displayQuestion()
+		startTimer()
 	})
-	$('body').append($divPlayAgain)
-	$('#playAgain').append($playAgainBtn)
 }
+
 
 
 $(() => {

@@ -386,7 +386,7 @@ Q: "The distance between the Moon and the Earth is approximately this much.",
 A: "238,897 miles (384,467km)",
 B: "62,000 miles (100,000km)",
 C: "155,342 miles (250,000 km)",
-D: "260,975 miles (420,000 km)",
+D: "260,975 miles (420,000 km)"
 },
 
 {
@@ -444,7 +444,7 @@ D: "Easter"
 },
 
 {
-Q: "The Moons diameter is approximately this long.",
+Q: "The Moon's diameter is approximately this long.",
 "correctAnswer": "2,154 miles (3,476 km)",
 A: "2,796 miles (4,500 km)",
 B: "2,154 miles (3,476 km)",
